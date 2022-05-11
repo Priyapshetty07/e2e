@@ -34,7 +34,7 @@ require('dotenv').config();
 
 let mysqlConnect = function () {
 
-    return mysql.createConnection({
+    let msql= mysql.createConnection({
 
         // host: 'localhost',
 
@@ -59,7 +59,7 @@ let mysqlConnect = function () {
         insecureAuth: true
 
     });
-
+return msql
 };
 
 
