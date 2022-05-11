@@ -1,0 +1,79 @@
+<div class="border border-dark m-5 p-3">
+  {{myform.value | json}}
+  <form class="row g-3" novalidate [formGroup]="myform">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input formControlName="email" type="email" class="form-control" id="inputEmail4">
+      <div class="text-danger" *ngIf="myform.controls['email'].touched && myform.controls['email'].invalid ">
+        <p *ngIf="myform.controls['email'].errors?.['required']"><b>Email is required</b></p>
+        <p *ngIf="myform.controls['email'].errors?.['email']"><b>please enter valid Email</b></p>
+        <p *ngIf="myform.controls['email'].errors?.['minlength']"><b>Email min length 4 character is required</b></p>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input formControlName="password" type="password" class="form-control" id="inputPassword4">
+      <div class="text-danger" *ngIf="myform.controls['password'].touched && myform.controls['password'].invalid">
+        <p *ngIf="myform.controls['password'].errors?.['required']"><b>Please Enter Password</b></p>
+        <p *ngIf="myform.controls['password'].errors?.['minlength']"><b>min length should 5 char</b></p>
+        <p *ngIf="myform.controls['password'].errors?.['maxlength']"><b>Min length should 6 char</b></p>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input formControlName="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <div class="text-danger" *ngIf="myform.controls['address'].touched && myform.controls['address'].invalid">
+        <p *ngIf="myform.controls['address'].errors?.['required']"><b>Adrress is Required</b></p>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input formControlName="address2" type="text" class="form-control" id="inputAddress2"
+        placeholder="Apartment, studio, or floor">
+      <div class="text-danger" *ngIf="myform.controls['address2'].touched && myform.controls['address2'].invalid">
+        <p *ngIf="myform.controls['address2'].errors?.['required']"><b>Address is Required</b></p>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input formControlName="city" type="text" class="form-control" id="inputCity">
+      <div class="text-danger" *ngIf="myform.controls['city'].touched && myform.controls['city'].invalid">
+        <p *ngIf="myform.controls['city'].errors?.['required']"><b>Address is Required</b></p>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select formControlName="state" id="inputState" class="form-select">
+        <option value="">Choose......</option>
+        <option [value]="state" *ngFor="let state of states">{{state}}</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input formControlName="zip" type="text" class="form-control" id="inputZip">
+      <div class="text-danger" *ngIf="myform.controls['zip'].touched &&  myform.controls['zip'].invalid">
+        <p *ngIf="myform.controls['zip'].errors?.['required']"><b>Zip is Required</b></p>
+
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+         </div>
+      </div>
+      <div class="col-12">
+        <!-- <button (click)="getValues()" type="submit" class="btn btn-primary">Sign in</button> -->
+        <input (click)="getValues()" type="button" value="Submit" [disabled]="myform.invalid">
+      </div>
+  </form>
+</div>

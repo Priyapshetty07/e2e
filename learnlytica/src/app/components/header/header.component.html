@@ -1,0 +1,51 @@
+<div style="border: 1px solid black;">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/home" role="tab"
+        aria-controls="pills-contact" aria-selected="false">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="/services" role="tab"
+        aria-controls="pills-home" aria-selected="true">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="/list-contact" role="tab"
+        aria-controls="pills-profile" aria-selected="false">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/course" role="tab"
+        aria-controls="pills-contact" aria-selected="false">Course</a>
+    </li>
+    <li class="nav-item">
+      <!-- <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/login" role="tab" aria-controls="pills-contact" aria-selected="false">Login</a>  -->
+      <button mat-button (click)="openLoginDialog()">Login</button>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/register" role="tab"
+        aria-controls="pills-contact" aria-selected="false">Register</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/profile" role="tab"
+        aria-controls="pills-contact" aria-selected="false">profile</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="/rxjs" role="tab"
+        aria-controls="pills-contact" aria-selected="false">RXJS</a>
+    </li>
+
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" [routerLink]="['template-form']" role="tab"
+        aria-controls="pills-contact" aria-selected="false">Template Form</a>
+    </li>
+
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+  </div>
+</div>

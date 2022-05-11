@@ -1,0 +1,34 @@
+<div class="card">
+
+    <img [src]="imgUrl" class="card-img-top" alt="...">
+
+    <div class="card-body">
+        <h5 class="card-title">{{configs['spayee:title'] | uppercase}} - MRP <span>{{configs['spayee:mrp'] }}</span>
+        </h5>
+        <span><b>Course date: </b> {{currentDate | date: 'MMM/dd/y h:mm:ss a' | uppercase}}</span>
+
+        <p class="card-text">Learnlytica</p>
+
+        <a href="#" class="btn btn-primary">View course</a>
+
+    </div>
+
+</div>
+
+
+<!-- <hr> -->
+<!-- <div class="container">
+    <div class="row">
+        <div *ngFor="let myele of card1" class="col-3">
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="{{myele.imagelink}}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-title">{{myele.title | uppercase}}</p>
+                  <p class="card-text">{{myele.text}}</p>
+                  <p class="card-text">{{myele.prize}}</p>
+                   <a href="#" class="btn btn-primary">Buy This Course</a> 
+                </div>
+              </div>
+        </div>
+    </div>
+</div>  -->

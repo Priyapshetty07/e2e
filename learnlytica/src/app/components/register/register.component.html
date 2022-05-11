@@ -1,0 +1,77 @@
+<div>
+    <div class="container">
+        {{myform.value | json}}
+        <div class="row">
+            <div class="col-7"></div>
+
+            <div class="col">
+                <div class="container" style="border: 1px solid rgb(240, 234, 234); border-radius: 10px;">
+
+                    <form novalidate [formGroup]="myform">
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput2" class="form-label"><b>Email</b></label>
+                                <input  formControlName="email" type="email" class="form-control" id="formGroupExampleInput2"
+                                    placeholder="priya@example.com">
+                            </div>
+                        </div>
+
+                        <div class=" row mt-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput2" class="form-label"><b>Password</b></label>
+                                <input formControlName="password" type="password" class="form-control" id="formGroupExampleInput2"
+                                    placeholder="Minimum be atleast 6 characters">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput2" class="form-label"><b>First Name</b></label>
+                                <input formControlName="fname" type="text" class="form-control" placeholder="Priya" aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput2" class="form-label"><b>Last Name</b></label>
+                                <input formControlName="lname" type="text" class="form-control" placeholder="Shetty" aria-label="Last name">
+                            </div>
+                        </div>
+
+
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span style="color: #333333; line-height: 1.57; font-weight: 400">
+                                    By Signing up, you agree to our <a href="#" target="_blank"
+                                        style="text-decoration: none;"><b>Terms
+                                            and
+                                            Conditions</b></a>.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col">
+                                <div class="d-grid gap-2">
+                                    <button  (click)="getValues2()" type="submit" class="btn btn-primary">Sign up</button>
+                                </div>
+                            </div>
+                            <div>
+
+                                <div class=" row mt-3">
+                                    <div class="col">
+                                        <div class="d-grid gap-2" style="text-align: center;">
+                                            <span>
+                                                <b>Already Registered?</b>
+                                                <a href="#"  style="text-decoration: none;"><b>Login</b></a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <br> <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
