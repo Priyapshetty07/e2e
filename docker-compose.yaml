@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysqldb:    //mysql connection
+  mysqldb:
     image: mysql:5.7
     container_name: mysqldb
     restart: unless-stopped
@@ -13,8 +13,7 @@ services:
     volumes:
       - db:/var/lib/mysql
 
-
-  node_app:     //express connection
+  node_app:
     depends_on:
       - mysqldb
     build: ./api-learnlytica
@@ -31,6 +30,17 @@ services:
       - DB_PORT=$MYSQLDB_DOCKER_PORT
     stdin_open: true
     tty: true
-
-volumes:
-  db: 
+ # docker-compose up  #forebgroud 
+ #  docker-compose up -d #backgroud/detached mode
+  # angular_app:
+  #   depends_on:
+  #     - node_app
+  #   build: ./learnlytica #build image and then start container from img
+  #   container_name: angular_app
+  #   restart: unless-stopped
+  #   ports:
+  #     - 9090:4200
+  #   stdin_open: true #show up logs from container trobleshooting
+  #   tty: true
+volumes: 
+  db:
