@@ -19,7 +19,7 @@ volumes:
   node_app:     //express connection
     depends_on:
       - mysqldb
-    build: ./api_learnlytica
+    build: ./api-learnlytica
     container_name: node_app
     restart: unless-stopped
     env_file: ./.env
