@@ -36,16 +36,6 @@ let mysqlConnect = function () {
 
     let msql= mysql.createConnection({
 
-        // host: 'localhost',
-
-        // user: 'root',
-
-        // password: 'PriyaDiya@0713',
-
-        // database: 'api_learn',
-
-        // insecureAuth : true
-
         host: process.env.DB_HOST,
 
         user: process.env.DB_USER,
@@ -59,7 +49,7 @@ let mysqlConnect = function () {
         insecureAuth: true
 
     });
-return msql
+    return msql
 };
 
 
