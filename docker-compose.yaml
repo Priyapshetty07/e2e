@@ -1,5 +1,4 @@
 version: '3'
-
 services:
   mysqldb:    //mysql connection
     image: mysql:5.7
